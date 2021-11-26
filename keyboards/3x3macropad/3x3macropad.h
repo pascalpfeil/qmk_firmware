@@ -18,6 +18,8 @@
 
 #include "quantum.h"
 
+#define ___ KC_NO
+
 /* This is a shortcut to help you visually see your layout.
  *
  * The first section contains all of the arguments representing the physical
@@ -32,6 +34,16 @@
     k20, k21, k22   \
 ) { \
     { k00, k01, k02 },  \
+    { k10, k11, k12 },  \
+	{ k20, k21, k22 }   \
+}
+
+#define LAYOUT_OLED(     \
+    k02,  \
+    k10, k11, k12,  \
+    k20, k21, k22   \
+) { \
+    { ___, ___, k02 },  \
     { k10, k11, k12 },  \
 	{ k20, k21, k22 }   \
 }
